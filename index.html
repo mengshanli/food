@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>日式料理圖片菜單</title>
+  <title>XX日式料理</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div class="container my-5">
-    <h1 class="text-center mb-5">日式料理圖片菜單</h1>
+    <h1 class="text-center mb-5 d-flex justify-content-center align-items-center gap-2">
+      <img src="../images/logo.jpg" alt="餐廳 Logo" style="height: 40px;">
+      XX日式料理
+    </h1>
     <pre>
       只有３８項餐點品項。
       菜單圖片參考完可以直接關掉網址
@@ -26,60 +29,6 @@
       </pre>
 
     <pre>
-      ★★★★★  訂位 / 訂餐  ★★★★★：
-
-      因本店由於人手不足
-      有空能接您電話的時間：
-      早上１０：００～１２：００
-      下午１４：００～１６：００
-      超過打電話的時間很大的機率打不通唷！
-      ( 現場太忙沒有人手可以接…）
-
-      因為平日基本上內用都會客滿，
-      加上很多的外帶訂單，
-      所以如果您想要在指定的時間取餐或是訂位，
-      請盡量在確定日期的前一天或甚至更早致電
-      給我們，盡可能幫您安排！
-
-      當日想訂餐：
-      １０：００～１０：３０
-      １５：００～１５：３０ 
-      這兩個時段致電
-      高機率能訂到較早的取餐時間唷！
-      （蠻多常客會提早很早打電話甚至提早
-      好幾天先訂好餐，所以不想太晚吃到的
-      饕客們趕緊提前預定唷！）
-
-      當日想內用用餐：
-      中午１２：００ 或 下午１６：３０
-      這兩個時段
-      高機率有現場空桌能夠讓您用餐唷！
-      ★因為店內位置有限
-      如果人數是４位以上包含４位
-      ㄧ定需要提早訂位！！！
-      否則非常高機率現場無足夠空桌能讓您入座唷！
-
-      ★如果遇到特殊節日盡量可以在開門的前
-      ３０分鐘左右在店門口排隊，以免有可能
-      一開門就瞬間客滿沒有位置… （真的）
-
-      如果遇到客滿情況需跟櫃檯服務人員
-      領取號碼菜單，在現場或是店門口外等待候位，
-      因為沒有限制用餐時間，故只能提供大概
-      等待時間（並非一定能在時間內入座），
-      但也有可能比預期預估的時間提早入座唷！
-
-      候位客人如果現場叫號不在現場會優先
-      讓給下一組客人，如果途中回來仍需等待
-      下一桌空桌唷！
-
-      因本店需要有準備食材的時間
-      故無法提供在營業時間之前提早取餐或
-      提早入內用餐請見諒…
-    </pre>
-
-    <pre>
-
       營業時間
       中午：１２：００～１５：００
       下午：１６：３０～２０：００
@@ -96,42 +45,39 @@
       ★★★★★ ★★★★★ ★★★★★
     </pre>
 
-
-    <div class="btn-group d-flex align-items-center 
-    justify-content-center" role="group" aria-label="日式料理種類" id="all">
-      <a href='#sashimi' type="button" class="btn btn-outline-primary">刺身</a>
-      <a href='#donburi' type="button" class="btn btn-outline-primary">冷食丼飯</a>
-      <a href='#sushi' type="button" class="btn btn-outline-primary">握壽司</a>
-      <a href='#handroll' type="button" class="btn btn-outline-primary">手卷</a>
-      <a href='#others' type="button" class="btn btn-outline-primary">單點</a>     
+    <div class="d-flex text-center gap-2 category-btns">
+      <button class="btn active" onclick="showCategory('sashimi')">刺身</button>
+      <button class="btn" onclick="showCategory('donburi')">冷食丼飯</button>
+      <button class="btn" onclick="showCategory('sushi')">握壽司</button>
+      <button class="btn" onclick="showCategory('handroll')">手卷</button>
+      <button class="btn" onclick="showCategory('others')">單點</button>
     </div>
 
-
-    <div class="text-center">
-      <h2 id="sashimi" class="my-5">刺身</h2>
+    <div class="text-center menu-item active" id="sashimi">
+      <h2 class="my-5">刺身</h2>
     </div>
-    <div class="text-center">
-      <h2 id="donburi" class="my-5">冷食丼飯</h2>
+    <div class="text-center menu-item" id="donburi">
+      <h2 class="my-5">冷食丼飯</h2>
     </div>
-    <div class="text-center">
-      <h2 id="sushi" class="my-5">握壽司</h2>
+    <div class="text-center menu-item" id="sushi">
+      <h2 class="my-5">握壽司</h2>
     </div>
-    <div class="text-center">
-      <h2 id="handroll" class="my-5">手卷</h2>
+    <div class="text-center menu-item" id="handroll">
+      <h2 class="my-5">手卷</h2>
     </div>
-    <div class="text-center">    
-      <h2 id="others" class="my-5">單點</h2>    
+    <div class="text-center menu-item" id="others">    
+      <h2 class="my-5">單點</h2>    
     </div>
   </div>
 
-  <a role="button" id="all_icon" href="#all">
+  <!-- <a role="button" id="all_icon" href="#all">
     <svg viewBox="0 0 20 20"class="svg-icon">
       <path d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
 								c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
 								s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
 								c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
     </svg>
-  </a>
+  </a> -->
   
   <script src="main.js"></script>
 </body>

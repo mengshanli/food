@@ -1,19 +1,29 @@
-#all_icon{
-  position:fixed;
-  right:10px;
-  bottom:10px; 
-  fill:black;           
-}   
-
-.svg-icon{
-  width:1.3em;
-  height:1.3em;
-  fill:var(--main_white);
-  stroke:var(--main_white);
-
+:root{
+  --button:#eab3c7;
 }
 
-.svg-icon:hover{
-  fill:var(--main_red);
-  stroke:var(--main_red);
+.menu-item {
+  display: none;
 }
+.menu-item.active {
+  display: block;
+}
+
+.category-btns .btn.active {
+  color:white;
+  background-color: var(--button);
+  border-color: var(--button);
+}
+
+.category-btns .btn {
+  color:var(--button);
+  background-color: white;
+  border:2px solid var(--button);
+  box-shadow: none;
+  border-radius:0.25rem;
+}
+
+.category-btns .btn:focus {
+  box-shadow: none!important; 
+}
+

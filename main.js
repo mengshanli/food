@@ -14,9 +14,16 @@ document.addEventListener("DOMContentLoaded", function() {
         food.innerHTML = `        
           <img class='col-md-5 col-10 my-3' src="${image_src}" alt="${category_en[i]+j}">
         `;
-        category.parentNode.appendChild(food);
+        category.appendChild(food);
       }
     }
 
 });
 
+function showCategory(category) {
+  document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+  document.getElementById(category).classList.add('active');
+
+  document.querySelectorAll('.category-btns .btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
