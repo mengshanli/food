@@ -21,9 +21,20 @@
   border:2px solid var(--button);
   box-shadow: none;
   border-radius:0.25rem;
+  flex-shrink: 0; /* 防止按鈕被壓縮 */
+  white-space: nowrap; /* 防止文字換行 */
+  
 }
 
 .category-btns .btn:focus {
   box-shadow: none!important; 
+}
+
+.category-btns {
+  -ms-overflow-style: none;  /* IE */
+  scrollbar-width: none;     /* Firefox */
+}
+.category-btns::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari 隱藏滾動條 */
 }
 
