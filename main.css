@@ -1,0 +1,19 @@
+#all_icon{
+  position:fixed;
+  right:10px;
+  bottom:10px; 
+  fill:black;           
+}   
+
+.svg-icon{
+  width:1.3em;
+  height:1.3em;
+  fill:var(--main_white);
+  stroke:var(--main_white);
+
+}
+
+.svg-icon:hover{
+  fill:var(--main_red);
+  stroke:var(--main_red);
+}
