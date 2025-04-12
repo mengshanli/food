@@ -21,9 +21,6 @@
 // });
 
 
-// https://bearstrivia.pixnet.net/blog/post/277324187
-// https://www.sushiexpress.com.tw/magictouch/menu
-
 
 
 

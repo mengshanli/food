@@ -2,6 +2,10 @@
   --button:#eab3c7;
 }
 
+a{
+  text-decoration: none;
+}
+
 .menu-item {
   display: none;
 }
